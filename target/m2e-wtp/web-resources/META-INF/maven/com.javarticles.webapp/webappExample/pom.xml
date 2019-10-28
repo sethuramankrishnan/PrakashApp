@@ -21,6 +21,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>webappExample</finalName>
+		<finalName>webappExamplePrakash</finalName>
 	</build>
 </project>
