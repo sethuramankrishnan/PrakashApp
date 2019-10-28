@@ -5,6 +5,12 @@ pipeline{
             steps{
                 git credentialsId: 'gituser', url: 'https://github.com/prakashkumardas/PrakashApp'
             }
-      }
+         }
+         stage("Maven Build"){
+            steps{
+                sh "mvn clean package"
+               
+            }
+        }
       }
 }
