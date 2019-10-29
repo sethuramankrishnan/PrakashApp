@@ -16,7 +16,7 @@ pipeline{
             steps{
                 sshagent (credentials: ['newtomcat'])  {
                         sh """
-                        scp -o StrictHostKeyChecking=no /target/*.war ec2-user@15.206.73.166:/opt/tomcat/webapps/
+                        scp -o StrictHostKeyChecking=no /target/*.war ec2-user@15.206.73.166:/tmp
                         """
                         
                 }              
