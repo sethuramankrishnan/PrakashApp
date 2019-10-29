@@ -6,11 +6,24 @@ pipeline{
                 git credentialsId: 'gituser', url: 'https://github.com/prakashkumardas/PrakashApp'
             }
          }
-         stage("Maven Build"){
+          stage("Maven Build"){
             steps{
-                sh "mvn clean package"
-               
+                sh "mvn clean package"               
             }
-        }
+         }
+         
+         stage("Deploy"){
+            steps{
+                sshagent (credentials: ['tomcat'])  {
+                        sh """
+                        scp -o StrictHostKeyChecking=no /target/*.war tomcat@15.206.73.166:/opt/tomcat/webapps/
+                        """
+                        
+                }              
+            }
+         }
+         
+         
+         
       }
 }
