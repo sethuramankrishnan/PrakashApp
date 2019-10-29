@@ -16,7 +16,7 @@ pipeline{
                 sshagent (credentials: ['pkd'])  {
 
                         sh """
-                        scp -o StrictHostKeyChecking=no target/*.war ec2-user@15.206.73.166:/tmp
+                        scp -o StrictHostKeyChecking=no target/*.war ec2-user@15.206.73.166:/opt/tomcat/webapps/
                        
                         """
                   }
