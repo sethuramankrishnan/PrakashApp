@@ -17,10 +17,7 @@ pipeline{
 
                         sh """
                         scp -o StrictHostKeyChecking=no target/webappExampleDas.war ec2-user@15.206.73.166:/tmp
-                        ssh ec2-user@15.206.73.166 sudo su chown -R root:root /tmp/webappExampleDas.war
-                        
-                        ssh ec2-user@15.206.73.166 mv /tmp/chown -R root:root webappExampleDas.war /opt/tomcat/webapps/
-
+                        ssh ec2-user@15.206.73.166 sudo su chown root:root /tmp/webappExampleDas.war
                         """
                   }
                 }    
