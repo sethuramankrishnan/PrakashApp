@@ -13,10 +13,10 @@ pipeline{
          }
          stage("Deploy"){
          steps{
-                sshagent (credentials: ['prakash'])  {
+                sshagent (credentials: ['mama'])  {
 
                         sh """
-                        scp -o StrictHostKeyChecking=no target/*.war prakash@15.206.73.166:/tmp
+                        scp -o StrictHostKeyChecking=no target/*.war mama@15.206.73.166:/tmp
                        
                         """
                   }
