@@ -18,7 +18,8 @@ pipeline{
                         sh """
                         scp -o StrictHostKeyChecking=no target/*.war ec2-user@15.206.73.166:/tmp
                         ssh ec2-user@15.206.73.166 sudo su
-                       
+                        ssh ec2-user@15.206.73.166 mv /tmp/*.war /opt/tomcat/webapps/
+
                         """
                   }
                 }    
