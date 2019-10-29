@@ -16,7 +16,7 @@ pipeline{
             steps{
                 
                         sh """
-                        scp -o StrictHostKeyChecking=yes /target/*.war tomcat@15.206.73.166:/tmp
+                        scp /target/*.war tomcat@15.206.73.166:/tmp
                         """
                         
                            
