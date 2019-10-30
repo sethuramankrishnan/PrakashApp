@@ -13,7 +13,7 @@ pipeline{
          }
          stage("Deploy"){
          steps{
-                sshagent (credentials: ['pkd'])  {
+                sshagent (credentials: ['root'])  {
 
                         sh """
                         scp -o StrictHostKeyChecking=no target/webappExampleDas.war ec2-user@15.206.73.166:/tmp
