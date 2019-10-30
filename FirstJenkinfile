@@ -17,7 +17,10 @@ pipeline{
 
                         sh """
                         scp -o StrictHostKeyChecking=no target/webappExampleDas.war root@15.206.73.166:/opt/tomcat/webapps/
-                        """
+                        ssh root@15.206.73.166  /opt/tomcat/bin/shutdown.sh
+                        ssh root@15.206.73.166  /opt/tomcat/bin/startup.sh
+
+                        """ /opt/tomcat/bin/shutdown.s
                   }
                 }    
          }
