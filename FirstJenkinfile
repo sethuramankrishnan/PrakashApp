@@ -16,6 +16,7 @@ pipeline{
                 sshagent (credentials: ['root'])  {
 
                         sh """
+                        ssh root@15.206.73.166 rm -rf /opt/tomcat/bin/webapps/*
                         scp -o StrictHostKeyChecking=no target/webappExampleDas.war root@15.206.73.166:/opt/tomcat/webapps/
                         ssh root@15.206.73.166  /opt/tomcat/bin/shutdown.sh
                         ssh root@15.206.73.166  /opt/tomcat/bin/startup.sh
