@@ -20,7 +20,7 @@ pipeline{
                         ssh root@15.206.73.166  /opt/tomcat/bin/shutdown.sh
                         ssh root@15.206.73.166  /opt/tomcat/bin/startup.sh
 
-                        """ /opt/tomcat/bin/shutdown.s
+                        """
                   }
                 }    
          }
