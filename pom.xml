@@ -21,10 +21,7 @@
 		</dependency>
 	</dependencies>
 	<distributionManagement>
-     <repository>
-    <id>Sethu-Release</id>
-    <url>http://3.80.193.239:8081/repository/Sethu-Release/</url>
-  </repository>
+     
   </distributionManagement>
 	<build>
 		<finalName>webappExampleDas</finalName>
