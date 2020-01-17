@@ -4,7 +4,7 @@
 	<groupId>com.javarticles.webapp</groupId>
 	<artifactId>webappExampleDas</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-release</version>
+	<version>0.0.3-release</version>
 	<name>webappExample Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
